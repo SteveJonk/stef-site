@@ -21,7 +21,6 @@ module.exports = {
     extend: {
       spacing: {
         '9/16': '56.25%',
-        '5px': '5px',
       },
       lineHeight: {
         11: '2.75rem',
@@ -36,6 +35,34 @@ module.exports = {
         primary: colors.blue,
         secondary: colors.red,
         gray: colors.neutral,
+        blue: {
+          DEFAULT: '#5F5CFF',
+          50: '#FFFFFF',
+          100: '#FFFFFF',
+          200: '#D7D6FF',
+          300: '#AFAEFF',
+          400: '#8785FF',
+          500: '#5F5CFF',
+          600: '#2824FF',
+          700: '#0400EB',
+          800: '#0300B3',
+          900: '#02007B',
+          950: '#02005F',
+        },
+        red: {
+          DEFAULT: '#F23567',
+          50: '#FDE1E9',
+          100: '#FCCEDA',
+          200: '#F9A8BE',
+          300: '#F782A1',
+          400: '#F45B84',
+          500: '#F23567',
+          600: '#E00E46',
+          700: '#AC0B36',
+          800: '#770825',
+          900: '#420415',
+          950: '#28030C',
+        },
       },
       typography: (theme) => ({
         DEFAULT: {

@@ -36,7 +36,7 @@ const SocialIcon = ({ kind, href, size = 8, rounded = false }) => {
         className={`fill-current h-${size} w-${size} ${
           rounded
             ? 'text-white'
-            : 'text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400'
+            : 'text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-600'
         }`}
       />
     </a>

@@ -28,7 +28,7 @@ export default function Home({ posts, about_me }: InferGetStaticPropsType<typeof
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
             Hey there!
           </h1>
           <p className="max-w-none text-xl text-gray-600 dark:text-gray-300">
@@ -46,6 +46,14 @@ export default function Home({ posts, about_me }: InferGetStaticPropsType<typeof
           </div>
           <SocialIcons rounded />
           <MDXSingleArticle mdxSource={about_me} />
+        </div>
+        <div className="py-4">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+            Fiddling Around
+          </h1>
+          <p className="text-md mt-3 text-gray-600 dark:text-gray-300 sm:mt-2">
+            A collection of my latest fiddles, containing fun stuff with new technologies and ideas.
+          </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}

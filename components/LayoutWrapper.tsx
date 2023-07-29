@@ -7,6 +7,7 @@ import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { ReactNode } from 'react'
+import Image from 'next/image'
 
 interface Props {
   children: ReactNode
@@ -15,7 +16,7 @@ interface Props {
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
+      <div className="flex min-h-screen flex-col justify-between">
         <header className="sticky top-0 z-10 flex items-center justify-between bg-white py-10 dark:bg-gray-900">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
