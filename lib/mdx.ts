@@ -5,7 +5,6 @@ import path from 'path'
 import readingTime from 'reading-time'
 import getAllFilesRecursively from './utils/files'
 import { PostFrontMatter } from 'types/PostFrontMatter'
-import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
 import { Toc } from 'types/Toc'
 // Remark packages
 import remarkGfm from 'remark-gfm'
@@ -125,7 +124,7 @@ export async function getAllFilesFrontMatter(folder: 'blog') {
     }
     const source = fs.readFileSync(file, 'utf8')
     const matterFile = matter(source)
-    const frontmatter = matterFile.data as AuthorFrontMatter | PostFrontMatter
+    const frontmatter = matterFile.data as PostFrontMatter
     if ('draft' in frontmatter && frontmatter.draft !== true) {
       allFrontMatter.push({
         ...frontmatter,

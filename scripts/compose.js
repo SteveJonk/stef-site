@@ -5,12 +5,6 @@ const dedent = require('dedent')
 
 const root = process.cwd()
 
-const getAuthors = () => {
-  const authorPath = path.join(root, 'data', 'authors')
-  const authorList = fs.readdirSync(authorPath).map((filename) => path.parse(filename).name)
-  return authorList
-}
-
 const getLayouts = () => {
   const layoutPath = path.join(root, 'layouts')
   const layoutList = fs
@@ -69,7 +63,6 @@ inquirer
       name: 'authors',
       message: 'Choose authors:',
       type: 'checkbox',
-      choices: getAuthors,
     },
     {
       name: 'summary',

@@ -18,7 +18,6 @@ This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com
 - Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
 - Flexible data retrieval with [mdx-bundler](https://github.com/kentcdodds/mdx-bundler)
 - Support for tags - each unique tag will be its own page
-- Support for multiple authors
 - Blog templates
 - TOC component
 - Support for nested routing of blog posts
