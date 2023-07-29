@@ -21,6 +21,7 @@ module.exports = {
     extend: {
       spacing: {
         '9/16': '56.25%',
+        '5px': '5px',
       },
       lineHeight: {
         11: '2.75rem',

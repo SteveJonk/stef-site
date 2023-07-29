@@ -51,7 +51,6 @@ export const getStaticProps: GetStaticProps<{
 
 export default function Blog({ post, prev, next }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { mdxSource, toc, frontMatter } = post
-
   return (
     <>
       {'draft' in frontMatter && frontMatter.draft !== true ? (

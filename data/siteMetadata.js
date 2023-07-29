@@ -1,9 +1,8 @@
 const siteMetadata = {
   title: 'STEF',
   author: 'Steve Jonk',
-  headerTitle: 'StefDesign',
-  description:
-    'Stef Design is a multi-disciplinary web development studio based in Haarlem, The Netherlands. We create visual identities, websites, and digital products for clients and audiences in the cultural and commercial sectors.',
+  headerTitle: 'Stef',
+  description: 'Stef is a multi-disciplinary web development studio based in Haarlem',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://stevejonk.com',
