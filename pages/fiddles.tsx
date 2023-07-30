@@ -12,7 +12,7 @@ export const getStaticProps: GetStaticProps<{
   initialDisplayPosts: ComponentProps<typeof ListLayout>['initialDisplayPosts']
   pagination: ComponentProps<typeof ListLayout>['pagination']
 }> = async () => {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('fiddles')
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
   const pagination = {
     currentPage: 1,
@@ -22,14 +22,14 @@ export const getStaticProps: GetStaticProps<{
   return { props: { initialDisplayPosts, posts, pagination } }
 }
 
-export default function Blog({
+export default function Fiddles({
   posts,
   initialDisplayPosts,
   pagination,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title="Blog" description={siteMetadata.description} />
+      <PageSEO title="Fiddle" description={siteMetadata.description} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}

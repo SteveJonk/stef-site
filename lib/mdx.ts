@@ -24,10 +24,10 @@ import rehypePresetMinify from 'rehype-preset-minify'
 
 const root = process.cwd()
 
-export function getFiles(type: 'blog' | 'authors') {
+export function getFiles(type: 'fiddles' | 'authors') {
   const prefixPaths = path.join(root, 'data', type)
   const files = getAllFilesRecursively(prefixPaths)
-  // Only want to return blog/path and ignore root, replace is needed to work on Windows
+  // Only want to return fiddle/path and ignore root, replace is needed to work on Windows
   return files.map((file) => file.slice(prefixPaths.length + 1).replace(/\\/g, '/'))
 }
 
@@ -41,7 +41,7 @@ export function dateSortDesc(a: string, b: string) {
   return 0
 }
 
-export async function getFileBySlug(type: 'blog' | '', slug: string | string[]) {
+export async function getFileBySlug(type: 'fiddles' | '', slug: string | string[]) {
   const mdxPath = path.join(root, 'data', type, `${slug}.mdx`)
   const mdPath = path.join(root, 'data', type, `${slug}.md`)
   const source = fs.existsSync(mdxPath)
@@ -108,7 +108,7 @@ export async function getFileBySlug(type: 'blog' | '', slug: string | string[]) 
   }
 }
 
-export async function getAllFilesFrontMatter(folder: 'blog') {
+export async function getAllFilesFrontMatter(folder: 'fiddles') {
   const prefixPaths = path.join(root, 'data', folder)
 
   const files = getAllFilesRecursively(prefixPaths)

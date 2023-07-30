@@ -1,7 +1,7 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
-import { BlogSEO } from '@/components/SEO'
+import { FiddleSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
@@ -20,7 +20,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
 
   return (
     <SectionContainer>
-      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
+      <FiddleSEO url={`${siteMetadata.siteUrl}/fiddles/${slug}`} {...frontMatter} />
       <ScrollTopAndComment />
       <article>
         <div>
@@ -51,7 +51,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
                 {prev && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/blog/${prev.slug}`}
+                      href={`/fiddles/${prev.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       &larr; {prev.title}
@@ -61,7 +61,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
                 {next && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/blog/${next.slug}`}
+                      href={`/fiddles/${next.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       {next.title} &rarr;

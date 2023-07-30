@@ -98,11 +98,11 @@ export const TagSEO = ({ title, description }: PageSEOProps) => {
   )
 }
 
-interface BlogSeoProps extends PostFrontMatter {
+interface FiddleSeoProps extends PostFrontMatter {
   url: string
 }
 
-export const BlogSEO = ({
+export const FiddleSEO = ({
   title,
   summary,
   date,
@@ -110,7 +110,7 @@ export const BlogSEO = ({
   url,
   images = [],
   canonicalUrl,
-}: BlogSeoProps) => {
+}: FiddleSeoProps) => {
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
   const imagesArr =

@@ -13,7 +13,7 @@ import { PostFrontMatter } from 'types/PostFrontMatter'
 const root = process.cwd()
 
 export async function getStaticPaths() {
-  const tags = await getAllTags('blog')
+  const tags = await getAllTags('fiddles')
 
   return {
     paths: Object.keys(tags).map((tag) => ({
@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[]; tag: str
   context
 ) => {
   const tag = context.params.tag as string
-  const allPosts = await getAllFilesFrontMatter('blog')
+  const allPosts = await getAllFilesFrontMatter('fiddles')
   const filteredPosts = allPosts.filter(
     (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(tag)
   )

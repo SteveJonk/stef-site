@@ -1,18 +1,14 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
-import { BlogSEO } from '@/components/SEO'
+import { FiddleSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { ReactNode } from 'react'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteMetadata.siteUrl}/blog/${slug}`
-  )}`
+const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/fiddles/${fileName}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
@@ -33,7 +29,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
 
   return (
     <SectionContainer>
-      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
+      <FiddleSEO url={`${siteMetadata.siteUrl}/fiddles/${slug}`} {...frontMatter} />
       <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
@@ -86,7 +82,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
                           Previous Article
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/fiddles/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
                     )}
@@ -96,7 +92,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
                           Next Article
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/fiddles/${next.slug}`}>{next.title}</Link>
                         </div>
                       </div>
                     )}
@@ -105,10 +101,10 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
               </div>
               <div className="pt-4 xl:pt-8">
                 <Link
-                  href="/blog"
+                  href="/fiddles"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; Back to the blog
+                  &larr; Back to the fiddles
                 </Link>
               </div>
             </footer>
