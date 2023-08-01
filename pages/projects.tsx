@@ -25,6 +25,8 @@ export default function Projects() {
                 description={d.description}
                 imgSrc={d.imgSrc}
                 href={d.href}
+                tags={d.tags}
+                repo={d.repo}
               />
             ))}
           </div>
