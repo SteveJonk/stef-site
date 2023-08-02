@@ -16,11 +16,9 @@ export default function Footer() {
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
         </div>
-        {/*<div className="mb-8 text-sm text-gray-500 dark:text-gray-400">*/}
-        {/*  <Link href="https://github.com/timlrx/tailwind-nextjs-starter-fiddle">*/}
-        {/*    Tailwind Nextjs Theme*/}
-        {/*  </Link>*/}
-        {/*</div>*/}
+        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+          <Link href={siteMetadata.siteRepo}>View on GitHub</Link>
+        </div>
       </div>
     </footer>
   )

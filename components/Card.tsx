@@ -63,7 +63,7 @@ const Card = ({ title, description, imgSrc, href, repo, tags }: ProjectsData) =>
               className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
               aria-label={`View on github ${title}`}
             >
-              View on GitHub &rarr;
+              View on Github &rarr;
             </Link>
           )}
         </div>

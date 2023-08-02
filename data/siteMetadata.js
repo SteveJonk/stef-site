@@ -6,7 +6,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://stevejonk.com',
-  siteRepo: 'todo: add repo',
+  siteRepo: 'https://github.com/SteveJonk/stef-site',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',

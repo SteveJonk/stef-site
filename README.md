@@ -1,6 +1,8 @@
 # Stef Site and Starter Template
 
-This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) site, completely based on [Timlrx's starter template](https://github.com/timlrx/tailwind-nextjs-starter-blog). Probably the most feature-rich Next.js markdown blogging template out there.
+This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) site, completely based on [Timlrx's starter template](https://github.com/timlrx/tailwind-nextjs-starter-blog).
+
+The plan is to contribute to the original project by creating PR's for the features that are added for this site.
 
 ## Key features
 
