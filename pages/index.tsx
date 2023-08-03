@@ -9,8 +9,11 @@ import { PostFrontMatter } from 'types/PostFrontMatter'
 import { MDXSingleArticle } from '@/components/MDXSingleArticle'
 import Image from 'next/image'
 import { SocialIcons } from '@/components/SocialIcons'
+import projectsData from '@/data/projectsData'
+import Card from '@/components/Card'
 
 const MAX_DISPLAY = 5
+const PROJECT_AMOUNT = 2
 
 export const getStaticProps: GetStaticProps<{
   posts: PostFrontMatter[]
@@ -118,6 +121,41 @@ export default function Home({ posts, about_me }: InferGetStaticPropsType<typeof
           </Link>
         </div>
       )}
+
+      <div className="mt-4 divide-y divide-gray-200 border-t-[1px] border-gray-200 dark:divide-gray-700 dark:border-gray-700">
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+            Projects
+          </h1>
+          <p className="text-md mt-3 text-gray-600 dark:text-gray-300 sm:mt-2">
+            A Showcase of various different projects I did for a multitude of clients.
+          </p>
+        </div>
+        <div className="container py-12">
+          <div className="-m-4 flex flex-wrap">
+            {projectsData.slice(0, PROJECT_AMOUNT).map((d) => (
+              <Card
+                key={d.title}
+                title={d.title}
+                description={d.description}
+                imgSrc={d.imgSrc}
+                href={d.href}
+                tags={d.tags}
+                repo={d.repo}
+              />
+            ))}
+          </div>
+          <div className="mt-4 flex justify-end text-base font-medium leading-6">
+            <Link
+              href="/projects"
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="all projects"
+            >
+              All Projects &rarr;
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
