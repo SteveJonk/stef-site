@@ -6,6 +6,7 @@ import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/l
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import { Toc } from 'types/Toc'
+import { PageTransition } from '@/components/wrappers/PageTransition'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -56,7 +57,7 @@ export default function Fiddle({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { mdxSource, toc, frontMatter } = post
   return (
-    <>
+    <PageTransition>
       {'draft' in frontMatter && frontMatter.draft !== true ? (
         <MDXLayoutRenderer
           layout={frontMatter.layout || DEFAULT_LAYOUT}
@@ -76,6 +77,6 @@ export default function Fiddle({
           </PageTitle>
         </div>
       )}
-    </>
+    </PageTransition>
   )
 }

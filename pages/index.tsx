@@ -11,6 +11,7 @@ import Image from 'next/image'
 import { SocialIcons } from '@/components/SocialIcons'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
+import { PageTransition } from '@/components/wrappers/PageTransition'
 
 const MAX_DISPLAY = 5
 const PROJECT_AMOUNT = 2
@@ -27,7 +28,7 @@ export const getStaticProps: GetStaticProps<{
 
 export default function Home({ posts, about_me }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <>
+    <PageTransition>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
@@ -156,6 +157,6 @@ export default function Home({ posts, about_me }: InferGetStaticPropsType<typeof
           </div>
         </div>
       </div>
-    </>
+    </PageTransition>
   )
 }

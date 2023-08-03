@@ -4,6 +4,7 @@ import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ComponentProps } from 'react'
+import { PageTransition } from '@/components/wrappers/PageTransition'
 
 export const POSTS_PER_PAGE = 5
 
@@ -28,14 +29,14 @@ export default function Fiddles({
   pagination,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <>
-      <PageSEO title="Fiddle" description={siteMetadata.description} />
+    <PageTransition>
+      <PageSEO title="Fiddling Around" description={siteMetadata.description} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
         title="All Posts"
       />
-    </>
+    </PageTransition>
   )
 }

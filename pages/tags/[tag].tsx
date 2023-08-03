@@ -1,4 +1,5 @@
 import { TagSEO } from '@/components/SEO'
+import { PageTransition } from '@/components/wrappers/PageTransition'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import generateRss from '@/lib/generate-rss'
@@ -49,9 +50,9 @@ export default function Tag({ posts, tag }: InferGetStaticPropsType<typeof getSt
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   return (
-    <>
+    <PageTransition>
       <TagSEO title={`${tag} - ${siteMetadata.title}`} description={`${tag} tags`} />
       <ListLayout posts={posts} title={title} />
-    </>
+    </PageTransition>
   )
 }

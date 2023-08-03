@@ -5,6 +5,7 @@ import ListLayout from '@/layouts/ListLayout'
 import { POSTS_PER_PAGE } from '../../fiddles'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
+import { PageTransition } from '@/components/wrappers/PageTransition'
 
 export const getStaticPaths: GetStaticPaths<{ page: string }> = async () => {
   const totalPosts = await getAllFilesFrontMatter('fiddles')
@@ -53,7 +54,7 @@ export default function PostPage({
   pagination,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <>
+    <PageTransition>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <ListLayout
         posts={posts}
@@ -61,6 +62,6 @@ export default function PostPage({
         pagination={pagination}
         title="All Posts"
       />
-    </>
+    </PageTransition>
   )
 }

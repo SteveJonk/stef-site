@@ -2,10 +2,11 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
+import { PageTransition } from '@/components/wrappers/PageTransition'
 
 export default function Projects() {
   return (
-    <>
+    <PageTransition>
       <PageSEO title="Projects" description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
@@ -32,6 +33,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </>
+    </PageTransition>
   )
 }
