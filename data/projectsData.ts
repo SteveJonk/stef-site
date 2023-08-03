@@ -9,24 +9,24 @@ export interface ProjectsData {
 
 const projectsData: ProjectsData[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
-    repo: 'https://www.google.com',
-    tags: ['Search', 'Engine', 'Google'],
+    title: 'Go Britain',
+    description: `Browse the hottest trends, find your unique style, 
+      and enjoy a seamless shopping experience. 
+      Elevate your fashion game with us today!`,
+    imgSrc: '/static/images/GoBritain.jpg',
+    href: 'https://www.go-britain.nl/',
+    // repo: 'https://www.google.com',
+    tags: ['E-commerce', 'WooCommerce', 'Wordpress'],
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/fiddles/the-time-machine',
-    repo: 'https://www.google.com',
-    tags: ['Time', 'Machine', 'Travel'],
+    title: 'Mental Toughness Program',
+    description: `This app is designed to improve your golf game through enhanced mental strength and performance strategies. 
+    Elevate your skills on the course with this transformative tool. I created both the App and the Landing Page for this project. 
+    The app is behind a paywall.`,
+    imgSrc: '/static/images/MTP.jpg',
+    href: 'https://mentaltoughness.golf/',
+    // repo: 'https://www.google.com',
+    tags: ['React', 'SPA', 'Web App'],
   },
 ]
 
