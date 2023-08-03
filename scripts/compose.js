@@ -7,11 +7,10 @@ const root = process.cwd()
 
 const getLayouts = () => {
   const layoutPath = path.join(root, 'layouts')
-  const layoutList = fs
+  return fs
     .readdirSync(layoutPath)
     .map((filename) => path.parse(filename).name)
     .filter((file) => file.toLowerCase().includes('post'))
-  return layoutList
 }
 
 const genFrontMatter = (answers) => {
@@ -29,11 +28,12 @@ const genFrontMatter = (answers) => {
   title: ${answers.title ? answers.title : 'Untitled'}
   date: '${date}'
   tags: [${answers.tags ? tags : ''}]
-  draft: ${answers.draft === 'yes' ? true : false}
+  draft: ${answers.draft === 'yes'}
   summary: ${answers.summary ? answers.summary : ' '}
   images: []
   layout: ${answers.layout}
   canonicalUrl: ${answers.canonicalUrl}
+  repoUrl: ${answers.repoUrl}
   `
 
   frontMatter = frontMatter + '\n---'
@@ -77,6 +77,11 @@ inquirer
       choices: getLayouts,
     },
     {
+      name: 'repoUrl',
+      message: 'Enter repository url:',
+      type: 'input',
+    },
+    {
       name: 'canonicalUrl',
       message: 'Enter canonical url:',
       type: 'input',
@@ -90,15 +95,15 @@ inquirer
       .replace(/ /g, '-')
       .replace(/-+/g, '-')
     const frontMatter = genFrontMatter(answers)
-    if (!fs.existsSync('data/blog')) fs.mkdirSync('data/blog', { recursive: true })
-    const filePath = `data/blog/${fileName ? fileName : 'untitled'}.${
+    if (!fs.existsSync('data/fiddles')) fs.mkdirSync('data/fiddles', { recursive: true })
+    const filePath = `data/fiddles/${fileName ? fileName : 'untitled'}.${
       answers.extension ? answers.extension : 'md'
     }`
     fs.writeFile(filePath, frontMatter, { flag: 'wx' }, (err) => {
       if (err) {
         throw err
       } else {
-        console.log(`Blog post generated successfully at ${filePath}`)
+        console.log(`Post generated successfully at ${filePath}`)
       }
     })
   })
