@@ -7,7 +7,6 @@ The plan is to contribute to the original project by creating PR's for the featu
 ## Key features
 
 - Easy styling customization with [Tailwind 3](https://tailwindcss.com/blog/tailwindcss-v3) and primary color attribute
-- Lightweight, 45kB first load JS, uses Preact in production build
 - Mobile-friendly view
 - Light and dark theme
 - Page transitions with [Framer Motion](https://www.framer.com/motion/)
