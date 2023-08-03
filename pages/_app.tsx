@@ -17,7 +17,7 @@ import { AnimatePresence } from 'framer-motion'
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
@@ -26,8 +26,12 @@ export default function App({ Component, pageProps }: AppProps) {
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
       <LayoutWrapper>
-        <AnimatePresence mode="wait" initial={false}>
-          <Component {...pageProps} />
+        <AnimatePresence
+          mode="wait"
+          initial={false}
+          onExitComplete={() => (document.documentElement.scrollTop = 0)}
+        >
+          <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
       </LayoutWrapper>
     </ThemeProvider>
