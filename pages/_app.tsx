@@ -26,7 +26,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
       <LayoutWrapper>
-        <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+        <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scroll(0, 0)}>
           <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
       </LayoutWrapper>
