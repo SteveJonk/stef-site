@@ -3,14 +3,14 @@ title: Discovering History with Archeomaps
 date: '2024-02-22'
 tags: ['history', 'maps', 'mapbox']
 draft: false
-summary: Archeomaps is a remarkable project driven by Jaimy Visser's passion for history and his dedication to making it accessible to everyone.
+summary: Archeomaps is an exciting project that brings history to life by pinpointing significant historical points on a world map.
 images: []
 layout: PostLayout
 canonicalUrl: https://archeomaps.stevejonk.com
 repoUrl: https://github.com/SteveJonk/archeomaps
 ---
 
-Archeomaps is an exciting project that brings history to life by pinpointing significant historical points on a world map and providing fascinating information about each location. This innovative endeavor, spearheaded by Jaimy Visser and made possible through the generous contribution of the entire dataset, offers a unique way to explore our rich cultural heritage.
+[Archeomaps](https://archeomaps.stevejonk.com) is an exciting project that brings history to life by pinpointing significant historical points on a world map and providing fascinating information about each location. This innovative endeavor, spearheaded by Jaimy Visser and made possible through the generous contribution of the entire dataset, offers a unique way to explore our rich cultural heritage.
 
 ## A Grateful Acknowledgment
 
@@ -23,7 +23,7 @@ Archeomaps leverages the power of Mapbox to provide users with a seamless and in
 
 ## Uncovering Hidden Gems
 
-The dataset, graciously provided by Jaimy Visser, forms the backbone of Archeomaps. To enhance the richness of the experience, we employed AI to generate additional information about each historical point, offering users a deeper insight into its significance. Whether you're exploring ancient civilizations, medieval landmarks, or modern historical events, Archeomaps promises to unveil hidden gems from across the globe.
+The dataset forms the backbone of Archeomaps. To enhance the richness of the experience, we employed AI to generate additional information about each historical point, offering users a deeper insight into its significance. Whether you're exploring ancient civilizations, medieval landmarks, or modern historical events, Archeomaps promises to unveil hidden gems from across the globe.
 
 ## Dive into History
 
