@@ -21,6 +21,10 @@ const ParticleBackground = () => {
       linkRadius: 300,
     }
 
+    const baseW = 2800
+    const baseH = 1200
+    const basePerimeter = baseW + baseH
+
     const rgb = options.lineColor.match(/\d+/g)
 
     const canvas = canvasRef.current
@@ -77,9 +81,13 @@ const ParticleBackground = () => {
     }
 
     const initializeParticles = () => {
+      const screenPerimeter = w + h
+      const scale = screenPerimeter / basePerimeter
+
       options.particleAmount = (w + h) / 50
-      options.defaultSpeed = (w + h) / 1500
-      options.variantSpeed = (w + h) / 2000
+      options.defaultSpeed = Math.sqrt(scale)
+      options.variantSpeed = Math.sqrt(scale)
+
       options.linkRadius = w / 10 + h / 5
       particles = []
       for (let i = 0; i < options.particleAmount; i++) {
