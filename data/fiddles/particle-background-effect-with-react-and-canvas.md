@@ -1,8 +1,8 @@
 ---
-title: Particle Background Effect with React and Canvas
+title: Particle Background Effect with HTML Canvas
 date: '2025-04-08'
 draft: false
-summary: Create a dynamic animated particle background using React and the HTML5 Canvas API.
+summary: Create a dynamic animated particle background using the HTML5 Canvas API.
 tags: ['react', 'canvas', 'animation', 'typescript']
 slug: particle-background-effect-with-react-and-canvas
 ---
