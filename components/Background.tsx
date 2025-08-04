@@ -78,6 +78,8 @@ const ParticleBackground = () => {
 
     const initializeParticles = () => {
       options.particleAmount = (w + h) / 50
+      options.defaultSpeed = (w + h) / 1500
+      options.variantSpeed = (w + h) / 2000
       options.linkRadius = w / 10 + h / 5
       particles = []
       for (let i = 0; i < options.particleAmount; i++) {
